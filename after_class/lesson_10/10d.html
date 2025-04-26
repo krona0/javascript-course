@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .game-button {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+
+      border: none;
+      border-radius: 5px;
+
+      padding: 8px 16px;
+    }
+    
+    .is-game-button {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="clickGame();" class="js-game-button game-button">Gaming</button>
+  <script>
+    function clickGame() {
+        const button = document.querySelector('.js-game-button');
+        button.classList.toggle('is-game-button');
+
+/*         if (
+          !button.classList.contains('is-game-button')
+        ) {
+          button.classList.add('is-game-button')
+        } else {
+          button.classList.remove('is-game-button')
+        }  */
+    }
+  </script>
+</body>
+</html>

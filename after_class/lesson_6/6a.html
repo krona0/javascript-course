@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function greetUsers(hour){
+      if (hour <= 12 && hour >= 6) {
+        return 'Good morning!'
+      }else if (hour <= 17 && hour >= 13) {
+        return 'Good afternoon!'
+      }else{
+        return 'Good night!'
+      }
+    }
+
+    const userName = 'Krona'
+    const dateTime = getRandomInt(0,23);
+    console.log(`It's ${dateTime} clock now: ${greetUsers(dateTime)}${userName}!`);
+  </script>
+</body>
+</html>

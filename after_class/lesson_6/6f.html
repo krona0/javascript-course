@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function headsTails(randomNumber){
+      if(randomNumber < 0.5){
+        return 'heads';
+      }else{
+        return 'tails';
+      }
+    }
+
+    function guessNumber(guess, result){
+      if(guess === result){
+        return 'You win!';
+      }else{
+        return 'You lose!';
+      }
+    }
+
+
+    const randomNumber = Math.random();
+    const reSult = headsTails(randomNumber);
+    const guEss = 'tails'; 
+    console.log(randomNumber, reSult,guessNumber(guEss, reSult));
+
+  </script>
+</body>
+</html>

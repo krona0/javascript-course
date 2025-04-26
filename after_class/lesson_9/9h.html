@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="Type something" class="js-keyup" onkeyup="
+    handleCostKeyup(event);
+  ">
+  <p class="js-output"></p>
+  <script>
+    function handleCostKeyup(){
+      if (event.key) {
+        keyupOutput();
+      }
+    }
+
+    function keyupOutput(){
+      const inputElement = document.querySelector('.js-keyup');
+      let content = inputElement.value;
+
+      document.querySelector('.js-output').
+      innerHTML = content;
+    }
+  </script>
+</body>
+</html>

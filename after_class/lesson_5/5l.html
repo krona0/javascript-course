@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <div style="
+    position: fixed;
+    top: 5px;
+    left: 10px;
+  ">
+    <p id="result"></p>
+  </div>
+
+  <div style="margin-top: 50px;">
+    <p>
+      <button onclick="
+        calculation += '1';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">1</button>
+      <button onclick="
+        calculation += '2';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">2</button>
+      <button onclick="
+        calculation += '3';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">3</button>
+      <button onclick="
+        calculation += ' + ';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation += '4';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">4</button>
+      <button onclick="
+        calculation += '5';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">5</button>
+      <button onclick="
+        calculation += '6';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">6</button>
+      <button onclick="
+        calculation += ' - ';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation += '7';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">7</button>
+      <button onclick="
+        calculation += '8';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">8</button>
+      <button onclick="
+        calculation += '9';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">9</button>
+      <button onclick="
+        calculation += ' * ';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation += '0';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">0</button>
+      <button onclick="
+        calculation += '.';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">.</button>
+      <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">=</button>
+      <button onclick="
+        calculation += ' / ';
+        console.log(calculation);
+        document.getElementById('result').textContent = calculation
+      ">/</button>
+    </p>
+
+
+    <button onclick="
+      calculation = ''
+      console.log('clear')
+      document.getElementById('result').textContent = calculation
+    ">clear</button>
+  </div>
+  <script>
+    let calculation = ''
+
+    document.getElementById('result').textContent = calculation
+  </script>
+</body>
+</html>
