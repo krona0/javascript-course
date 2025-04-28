@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const array1 = [1, 2, 3];
+    const array2 = [-2, -1, 0,99];
+    addOne(array1);
+    addOne(array2);
+
+    function addOne(array) {
+      const newArray = [];
+      for (let i = 0; i < array.length; i++) {
+        arrayValues = array[i] + 1;
+        newArray.push(arrayValues);
+      }
+
+      console.log(newArray)
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+
+    arraySwap([1, 20, 22, 24, 5]);
+    arraySwap(['hi', 'hello', 'good']);
+
+    function arraySwap(array) {
+      let newarry = [];
+
+      newarry.push(array[array.length - 1]);
+
+      for (i = 1; i < array.length - 1; i++) {
+        newarry.push(array[i]);
+      }
+
+      newarry.push(array[0]);
+      console.log(newarry);
+    }
+  </script>
+</body>
+</html>
