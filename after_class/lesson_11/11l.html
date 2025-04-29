@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    minMax([1,-3,5]);
+    minMax([-2,3,-5,7,10])
+
+    function minMax(array) {
+      let minV = array[0];
+      let maxV = array[0];
+
+      for (let i = 0; i < array.length; i++){
+        //console.log(array[i]);
+        if (array[i] < minV) {
+          minV = array[i];
+        } 
+        if (array[i] > maxV) {
+          maxV = array[i];
+        }
+      }
+      console.log(`{min:${minV}, max:${maxV}}`);
+    }
+  </script>
+</body>
+</html>

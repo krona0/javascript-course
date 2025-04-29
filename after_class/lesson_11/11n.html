@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // array ===> object
+    // ['apple','grape','apple','apple'] ===> {apple:3,grape:1}
+
+    function countWords(words) {
+      const objectOut = {};
+
+      for (let i = 0; i < words.length; i++) {
+        const word = words[i]
+
+        if (objectOut[word]) {
+          objectOut[word] ++;
+        } else {
+          objectOut[word] = 1;
+        }
+      }
+      return objectOut;
+    }
+
+    //countWords(['apple','grape','apple','apple'])
+    console.log(countWords(['apple','grape','apple','apple']))
+  </script>
+</body>
+</html>
