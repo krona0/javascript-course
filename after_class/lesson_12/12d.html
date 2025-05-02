@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    modifyButtonText();
+  " class="js-finish-button">Start</button>
+  <script>
+    function modifyButtonText() {
+      const buttonElement = document.querySelector('.js-finish-button');
+
+      if (buttonElement.textContent === 'Start') {
+        buttonElement.textContent = 'Loading...';
+        setTimeout(function(){
+          buttonElement.textContent = 'Finished!'
+        }, 1000);
+      } else {
+        buttonElement.textContent = 'Start'
+      }
+    }
+  </script>
+</body>
+</html>

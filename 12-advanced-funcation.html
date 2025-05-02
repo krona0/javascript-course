@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Funcations</title>
+</head>
+<body>
+  
+
+  <script>
+/*
+//In javascript funcation is variable.
+//Hoisting
+    function greeting() {
+      console.log('hello');
+    }
+
+    greeting();
+
+    const num = 2;
+    const function1 = function() {
+      console.log('hello2');
+    };
+
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+//method
+//funcation saved inside an object
+    const object1 = {
+      num: 2,
+      fun: function() {
+        console.log('hello3');
+      }
+    };
+    object1.fun()
+
+//Passing a value into a funcation
+    function display(param) {
+      console.log(param);
+    }
+    display(2);
+
+//Passing a funcation into another function
+    function run(param) {
+      param();
+    }
+    //Callback funcation
+    run(function() {
+      console.log('hello4')
+    });
+*/
+
+/*
+//Asynchronous Code
+//- won't wait for a line to finish before going to the next line
+//Synchronous Code = !Asynchronous Code;
+    setTimeout(function(){
+      console.log('timeout');
+      console.log('timeout2');
+    }, 3000);
+
+    console.log('next line');
+
+
+//setLnterval()
+//it will keep running a function in the future
+    setInterval(function() {
+      console.log('interval');
+    }, 3000);
+
+    console.log('next line 2');
+
+*/
+
+// .forEach() is the preferred way to loop through an array
+    [
+      'make dinner',
+      'wash dishes',
+      'watch youtube'
+    ].forEach(function(value, index) {
+      if (value === 'wash dishes') {
+        return;
+      }
+
+      console.log(index);
+      console.log(value);
+    });
+  </script>
+</body>
+</html>

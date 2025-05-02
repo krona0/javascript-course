@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+
+
+    function removeEgg(foods) {
+      let newFoods =[];
+      let countClock = 0;
+
+      // Create a copy of the array to avoid modifying the original
+      const reversedFoods = foods.slice().reverse();
+      //console.log(foods)
+
+      for (let i = 0; i < reversedFoods.length; i++) {
+        
+
+        //console.log(foods[i]);
+        //console.log(countClock);
+
+        // Skip when countClock >=2
+        if (reversedFoods[i] === 'egg' && countClock < 2) {
+          countClock ++;
+          continue
+        }
+        newFoods.push(reversedFoods[i]);
+      }
+      //Reverse the result back to the original order
+      return newFoods.reverse();
+    }
+
+    console.log(removeEgg(foods));
+    console.log(foods);
+
+  </script>
+</body>
+</html>

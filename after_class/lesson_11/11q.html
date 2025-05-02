@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function findIndex(array, world) {
+      let indexNum = -1;
+      for (i = 0; i < array.length; i++) {
+          //console.log(array[i]);
+          if (array[i] === world) {
+            indexNum = i
+            break
+          }
+        }
+      return indexNum;
+    }
+
+    console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+    console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+  </script>
+</body>
+</html>

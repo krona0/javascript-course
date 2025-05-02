@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // if world in array output 1;else output -1
+    function findIndex(array, world) {
+      let indexNum = -1;
+      for (let i = 0; i < array.length; i++) {
+          //console.log(array[i]);
+          if (array[i] === world) {
+            indexNum = i
+            break
+          }
+        }
+      return indexNum;
+    }
+
+    function unique(array) {
+      //set newArray
+      let result = [];
+      //console.log(array);
+
+      for (let i = 0; i < array.length; i++) {
+        //console.log(array[i]);
+        //let arrayValue = array[i];
+        
+        //console.log(findIndex(result,array[i]));
+
+        //verify value not repeat
+        if (findIndex(result,array[i]) === -1) {
+          result.push(array[i]);
+        }
+      }
+      return result;
+    }
+
+    console.log(unique(['green', 'red', 'blue', 'red']));
+    console.log(unique(['red', 'green','green', 'red']))
+
+
+    //put old arrayValue onebyone 
+
+    //console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+    //console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+  </script>
+</body>
+</html>repeat

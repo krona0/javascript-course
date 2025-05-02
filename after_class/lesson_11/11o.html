@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      function getSearch(array) {
+        let searchNum = -1
+        for (i = 0; i < array.length; i++) {
+          //console.log(array[i]);
+          if (array[i] === 'search') {
+            searchNum = i
+          }
+        }
+        return searchNum;
+      }
+
+      console.log(getSearch(['hello', 'world', 'search', 'good']));
+      console.log(getSearch(['not', 'found']));
+    </script>
+</body>
+</html>

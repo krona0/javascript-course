@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+</head>
+<body>
+  <button class="js-add">Add</button>
+  <button class="js-remove">Remove</button>
+  <script>
+    const addElement = document.querySelector('.js-add');
+    const removeElement = document.querySelector('.js-remove');
+    let messages = 2; // default 2 messages
+
+    addElement.addEventListener('click', function(){
+      messages++;
+    });
+
+    removeElement.addEventListener('click', function(){
+      if (messages > 0) {
+        messages--;
+      }
+    });
+
+    setInterval(function() {
+      if (document.title === 'App') {
+        document.title = `(${messages}) New messages`;
+      } else {
+        document.title = 'App';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
